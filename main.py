@@ -29,7 +29,7 @@ TZ_OFFSET = timezone(timedelta(hours=8))
 # Proxy Payment Gateway: API Key whitelist
 # Sensitive keys loaded from Railway Environment Variables for security.
 # Fallback defaults are provided for local development only.
-_owner_key = os.environ.get("MG_OWNER_API_KEY", "mg-owner-master-key-2026")
+_owner_key = os.environ.get("MG_MASTER_KEY", "mg-owner-master-key-2026")
 _demo_key = os.environ.get("MG_DEMO_API_KEY", "mg-demo-key-public")
 VALID_API_KEYS = {
     _owner_key: "owner",
@@ -39,7 +39,7 @@ VALID_API_KEYS = {
 # Receiving wallet for future x402 integration
 # Loaded from Railway Environment Variables for security.
 RECEIVING_WALLET = os.environ.get(
-    "MG_RECEIVING_WALLET",
+    "RECEIVING_WALLET",
     "0xFf44255854D9a42Ff296F9a6620272adDC98DdD2"
 )
 
